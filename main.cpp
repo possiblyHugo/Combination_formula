@@ -4,13 +4,31 @@ int factorial(int n);
 
 int main()
 {
+	int combinations = 0;
+	int n = 0;
+	int k = 0;
+
+	// User input
+	std::cout << "n = ";
+	std::cin >> n;
+
+	std::cout << "k = ";
+	std::cin >> k;
+
 	// Formula
 	/*
 	*  nCk = n! / k! (n-k)!  
 	*/
 
-	
+	std::cout << "Formula: " <<
+		n << "C" << k << " = " <<
+		n << "!" << " / " << k << "!" <<
+		"(" << n << "-" << k << ")!" << std::endl;
 
+	// Calculation
+	combinations = (factorial(n)) / (factorial(k) * (factorial(n - k)));
+	std::cout << "Total possible combinations: " << combinations;
+		
 	return 0;
 }
 
